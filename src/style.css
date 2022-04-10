@@ -1,4 +1,47 @@
-.helo {
-    color:red;
-    background: url('./logo.png');
+body {
+    background-color: black;
+}
+
+.Bar {
+    align-items: center;
+}
+
+.TopBar {
+    background-color:black;
+    border-radius: 25px;
+    border: 2px solid #04AA6D;
+    overflow: hidden;
+}
+
+.TopBar l {
+    float: left;
+}
+
+.TopBar .Buttons {
+    float:right;
+    margin-right: 1%;
+    top: 30px;
+    position: relative;
+}
+
+.TopBar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 25px;
+}
+
+.TopBar #Book {
+    float: left;
+    border-radius: 25px;
+    border: 2px solid #04AA6D;
+    
+}
+
+.TopBar a.active {
+    background-color: #04AA6D;
+    color: white;
 }
