@@ -8,7 +8,9 @@
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "server": "node server.js",
-    "build": "webpack"
+    "build": "webpack", 
+    "deploy": "gh-pages -d dist"
+
   },
   "keywords": [],
   "author": "Jack Sanders <jack.sanders@cern.ch>",
@@ -24,6 +26,7 @@
     "webpack-dev-server": "^4.8.1"
   },
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "lodash": "^4.17.21"
   }
 }
