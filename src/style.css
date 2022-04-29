@@ -80,3 +80,28 @@ body {
     margin-top: 10px;
 
 }
+
+#bottombox {
+    background-color: #04AA6D;
+    width: 100%;
+    padding: 20px;
+    overflow:auto;
+}
+
+#demo {
+    float:right;
+}
+
+#demotext {
+    color: white;
+    float: left;
+    font-size: 30px;
+    padding: 20px;
+    height: 100%;
+    width: 40%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+}

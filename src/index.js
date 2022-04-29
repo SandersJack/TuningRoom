@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import './style.css';
 import Icon from './logo.png';
+import Tom from './tom.png';
 //import Print from './print';
 
 function component() {
@@ -77,8 +78,20 @@ function component() {
   Container.appendChild(spacebox);
 
   const bottombox = document.createElement('div');
-  bottombox.setAttribute('id','topvid');
+  bottombox.setAttribute('id','bottombox');
   Container.appendChild(bottombox);
+
+  const dtext = document.createElement('div');
+  dtext.innerHTML = "<h1>WHY US?<h1> <h2>We are passionate about transforming your health. We are committed to finding the root cause of your problem, and will design a personalised care plan that is unique to you based on your problem.<h2>"
+  dtext.setAttribute('id','demotext');
+  bottombox.appendChild(dtext);
+
+  const demo = document.createElement('div');
+  demo.setAttribute('id','demo');
+  bottombox.appendChild(demo)
+  const mydemo = new Image();
+  mydemo.src = Tom;
+  demo.appendChild(mydemo);
 
   const BBar = document.createElement('div');
   BBar.setAttribute('id','BBar');
