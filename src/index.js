@@ -59,6 +59,31 @@ function component() {
   Bar.appendChild(NavBar)
   Container.appendChild(Bar)
 
+  const vidbox = document.createElement('div');
+  vidbox.setAttribute('id','topvid');
+  Container.appendChild(vidbox);
+
+  const helpbox = document.createElement('div');
+  helpbox.innerHTML = "Can we help YOU?  Contact us today to arrange a consultation with a Chiropractor. If we can't help you, we will tell you who can."
+  helpbox.setAttribute('id','helpbox');
+  Container.appendChild(helpbox);
+
+  const butbox = document.createElement('div');
+  butbox.setAttribute('id','butbox');
+  Container.appendChild(butbox);
+
+  const spacebox = document.createElement('div');
+  spacebox.setAttribute('id','spacebox');
+  Container.appendChild(spacebox);
+
+  const bottombox = document.createElement('div');
+  bottombox.setAttribute('id','topvid');
+  Container.appendChild(bottombox);
+
+  const BBar = document.createElement('div');
+  BBar.setAttribute('id','BBar');
+  Container.appendChild(BBar);
+
   return Container;
 }
 
