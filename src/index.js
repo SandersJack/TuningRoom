@@ -2,6 +2,12 @@ import _ from 'lodash';
 import './style.css';
 import Icon from './logo.png';
 import Tom from './tom.png';
+import Athlete from './athlete.jpg';
+import LowerBack from './LowBack.jpg';
+import Shoulder from './shoulder.jpg';
+import Neck from './neck.jpeg';
+import Pain from './musclePain.jpg';
+import Head from './headache.jpg';
 //import Print from './print';
 
 function component() {
@@ -59,30 +65,66 @@ function component() {
   NavBar.appendChild(Buttons)
   Bar.appendChild(NavBar)
   Container.appendChild(Bar)
-
+//////////////////////////////////////////////////////////
   const vidbox = document.createElement('div');
   vidbox.setAttribute('id','topvid');
   Container.appendChild(vidbox);
-
+//////////////////////////////////////////////////////////
   const helpbox = document.createElement('div');
   helpbox.innerHTML = "Can we help YOU?  Contact us today to arrange a consultation with a Chiropractor. If we can't help you, we will tell you who can."
   helpbox.setAttribute('id','helpbox');
   Container.appendChild(helpbox);
-
+//////////////////////////////////////////////////////////
   const butbox = document.createElement('div');
   butbox.setAttribute('id','butbox');
   Container.appendChild(butbox);
 
+  for(let i=0; i<6; i++){
+    const gallary = document.createElement('div');
+    gallary.setAttribute('id','gallary');
+    butbox.appendChild(gallary);
+    const photo = new Image();
+    const text = document.createElement('h1');
+    if (i==0) {
+      photo.src = LowerBack;
+      text.innerHTML = "LOWER BACK PAIN"
+    } else if (i == 1) {
+      photo.src = Athlete;
+      text.innerHTML = "ATHLETES"
+    } else if (i == 2) {
+      photo.src = Shoulder;
+      text.innerHTML = "SHOULDER PAIN"
+    } else if (i == 3) {
+      photo.src = Neck;
+      text.innerHTML = "NECK PAIN"
+    } else if (i == 4) {
+      photo.src = Head;
+      text.innerHTML = "HEADACHES"
+    } else if (i == 5) {
+      photo.src = Pain;
+      text.innerHTML = "MUSCLE PAIN"
+    }  
+    photo.setAttribute("id", "galleryimg")
+    text.setAttribute("id", "gallerytxt")
+    gallary.appendChild(photo);
+    gallary.appendChild(text);
+  }
+//////////////////////////////////////////////////////////
   const spacebox = document.createElement('div');
   spacebox.setAttribute('id','spacebox');
   Container.appendChild(spacebox);
-
+//////////////////////////////////////////////////////////
   const bottombox = document.createElement('div');
   bottombox.setAttribute('id','bottombox');
   Container.appendChild(bottombox);
 
   const dtext = document.createElement('div');
-  dtext.innerHTML = "<h1>WHY US?<h1> <h2>We are passionate about transforming your health. We are committed to finding the root cause of your problem, and will design a personalised care plan that is unique to you based on your problem.<h2>"
+  const header = document.createElement('h1');
+  header.innerHTML = "WHY US?"
+  dtext.append(header);
+  const subheader = document.createElement('h2');
+  subheader.innerHTML = "We are passionate about transforming your health. We are committed to finding the root cause of your problem, and will design a personalised care plan that is unique to you based on your problem."
+  dtext.append(subheader);
   dtext.setAttribute('id','demotext');
   bottombox.appendChild(dtext);
 
@@ -91,8 +133,9 @@ function component() {
   bottombox.appendChild(demo)
   const mydemo = new Image();
   mydemo.src = Tom;
+  mydemo.setAttribute('id','img');
   demo.appendChild(mydemo);
-
+//////////////////////////////////////////////////////////
   const BBar = document.createElement('div');
   BBar.setAttribute('id','BBar');
   Container.appendChild(BBar);
